@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RFWIN 100 Grip Seal Bags · AUERVO</title>
+  <style>
+    :root {
+      --bg: #f4f3f0;
+      --card: #ffffff;
+      --text: #1a1f1c;
+      --muted: #6b7280;
+      --brand: #2f5d50;
+      --brand-dark: #244a3f;
+      --brand-light: #e9f0ec;
+      --gold: #c9a227;
+      --gold-light: #faf3dd;
+      --accent: #c9552e;
+      --border: #ecebe7;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.06);
+      --shadow-lg: 0 12px 32px rgba(47,93,80,0.12);
+      --radius: 14px;
+      --page-width: 1200px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding-bottom: 60px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ===== Top bar ===== */
+    .topbar {
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: saturate(180%) blur(12px);
+      -webkit-backdrop-filter: saturate(180%) blur(12px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .topbar-inner {
+      max-width: var(--page-width);
+      margin: 0 auto;
+      padding: 16px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--brand);
+      letter-spacing: 2px;
+    }
+
+    .brand::after {
+      content: "";
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      background: var(--gold);
+      border-radius: 50%;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+
+    /* ===== Main container ===== */
+    .wrap {
+      max-width: var(--page-width);
+      margin: 32px auto 0;
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 48px 56px;
+      box-shadow: var(--shadow-md);
+    }
+
+    h1 {
+      font-size: 27px;
+      line-height: 1.4;
+      margin-bottom: 20px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    /* Model badge */
+    .model-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--gold-light) 0%, #fffaf0 100%);
+      border: 1px solid #ecd9a0;
+      border-radius: 10px;
+      padding: 10px 18px;
+      margin-bottom: 26px;
+      font-size: 14.5px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .model-label {
+      color: #8a6d1f;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+
+    .model-value {
+      color: #0f1111;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      background: #fff;
+      padding: 2px 10px;
+      border-radius: 5px;
+      border: 1px dashed #e0c988;
+    }
+
+    /* Main image */
+    .main-img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 18px;
+      background: #fafafa;
+      display: block;
+      transition: opacity 0.3s ease;
+      box-shadow: var(--shadow-md);
+    }
+
+    .main-img.fade { opacity: 0; }
+
+    /* Thumbnails */
+    .thumbs {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .thumbs img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 10px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: all 0.2s;
+      background: #fafafa;
+      opacity: 0.7;
+    }
+
+    .thumbs img:hover {
+      opacity: 1;
+      transform: translateY(-2px);
+    }
+
+    .thumbs img.active {
+      border-color: var(--brand);
+      opacity: 1;
+      box-shadow: 0 4px 12px rgba(47,93,80,0.18);
+    }
+
+    /* ===== Purchase card ===== */
+    .purchase-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+      padding: 26px 28px;
+      background: linear-gradient(180deg, #fbfbf9 0%, #ffffff 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 12px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .price-box {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-right: auto;
+      flex-wrap: wrap;
+    }
+
+    .price-now {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--brand);
+      letter-spacing: -0.5px;
+    }
+
+    .price-old {
+      font-size: 16px;
+      color: var(--muted);
+      text-decoration: line-through;
+    }
+
+    .save-badge {
+      background: var(--accent);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.3px;
+    }
+
+    .qty-box {
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .qty-box button {
+      border: none;
+      background: #fafaf8;
+      width: 40px;
+      height: 44px;
+      font-size: 18px;
+      cursor: pointer;
+      color: var(--text);
+      transition: 0.15s;
+    }
+
+    .qty-box button:hover { background: var(--brand-light); color: var(--brand); }
+
+    .qty-box input {
+      width: 54px;
+      height: 44px;
+      border: none;
+      text-align: center;
+      font-size: 15px;
+      font-weight: 600;
+      outline: none;
+      background: #fff;
+    }
+
+    .btn-buy {
+      background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 14px 48px;
+      font-size: 15.5px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: inherit;
+      letter-spacing: 0.5px;
+      box-shadow: 0 3px 10px rgba(47,93,80,0.28);
+    }
+
+    .btn-buy:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(47,93,80,0.4);
+    }
+
+    .btn-buy:active { transform: translateY(0); }
+
+    /* ===== Description ===== */
+    .desc { margin-top: 44px; }
+
+    .desc h2 {
+      font-size: 19px;
+      margin: 32px 0 14px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--brand-light);
+      color: var(--brand);
+      font-weight: 700;
+      letter-spacing: -0.2px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .desc h2::before {
+      content: "";
+      width: 4px;
+      height: 18px;
+      background: var(--gold);
+      border-radius: 2px;
+    }
+
+    .desc p {
+      margin-bottom: 14px;
+      font-size: 15.5px;
+      color: #333;
+      line-height: 1.85;
+    }
+
+    .desc .note {
+      font-size: 13px;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    /* Specs table */
+    .specs {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin-top: 10px;
+      font-size: 14.5px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .specs td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      background: #fff;
+      transition: 0.15s;
+    }
+
+    .specs tr:last-child td { border-bottom: none; }
+    .specs tr:nth-child(even) td { background: #fbfbf9; }
+    .specs tr:hover td { background: var(--brand-light); }
+
+    .specs td:first-child {
+      color: var(--brand);
+      width: 140px;
+      font-weight: 600;
+    }
+
+    /* Detail images */
+    .detail-imgs {
+      margin-top: 56px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+
+    .detail-imgs h2 {
+      font-size: 19px;
+      margin-bottom: 24px;
+      color: var(--brand);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .detail-imgs h2::before {
+      content: "";
+      width: 4px;
+      height: 18px;
+      background: var(--gold);
+      border-radius: 2px;
+    }
+
+    .detail-imgs img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 24px;
+      display: block;
+      background: #fafafa;
+      cursor: zoom-in;
+      transition: all 0.3s;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .detail-imgs img:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* ===== Reviews ===== */
+    .reviews {
+      margin-top: 56px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+
+    .reviews h2 {
+      font-size: 19px;
+      margin-bottom: 24px;
+      color: var(--brand);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .reviews h2::before {
+      content: "";
+      width: 4px;
+      height: 18px;
+      background: var(--gold);
+      border-radius: 2px;
+    }
+
+    .reviews-summary {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      padding: 20px 24px;
+      background: linear-gradient(135deg, var(--brand-light) 0%, #f7faf8 100%);
+      border-radius: 12px;
+      margin-bottom: 30px;
+    }
+
+    .reviews-score {
+      font-size: 44px;
+      font-weight: 800;
+      color: var(--brand);
+      line-height: 1;
+    }
+
+    .reviews-stars {
+      color: #e8a33d;
+      font-size: 20px;
+      letter-spacing: 3px;
+      margin-bottom: 4px;
+    }
+
+    .reviews-count {
+      font-size: 13.5px;
+      color: var(--muted);
+    }
+
+    .review {
+      padding: 22px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .review:last-child { border-bottom: none; }
+
+    .review-head { margin-bottom: 6px; }
+
+    .review-name {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .review-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+
+    .review-stars {
+      color: #e8a33d;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+    }
+
+    .review-headline {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .review-date {
+      font-size: 12.5px;
+      color: var(--muted);
+      margin-bottom: 3px;
+    }
+
+    .review-verified {
+      font-size: 12px;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .review-body {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #333;
+      margin-bottom: 12px;
+    }
+
+    .review-actions {
+      display: flex;
+      gap: 18px;
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+
+    .review-actions span {
+      cursor: pointer;
+      transition: 0.15s;
+    }
+
+    .review-actions span:hover {
+      color: var(--brand);
+      text-decoration: underline;
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(15,17,17,0.92);
+      z-index: 999;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      cursor: zoom-out;
+      backdrop-filter: blur(4px);
+    }
+
+    .lightbox.show { display: flex; animation: fadeIn 0.25s; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .lightbox img {
+      max-width: 95%;
+      max-height: 92vh;
+      border-radius: 8px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      max-width: var(--page-width);
+      margin: 56px auto 0;
+      padding: 0 28px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 32px;
+      font-size: 13.5px;
+      color: var(--muted);
+    }
+
+    .footer-col h5 {
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 14px;
+      letter-spacing: 0.3px;
+    }
+
+    .footer-col a {
+      display: block;
+      color: var(--muted);
+      text-decoration: none;
+      margin-bottom: 8px;
+      transition: 0.15s;
+    }
+
+    .footer-col a:hover { color: var(--brand); }
+
+    .footer-bottom {
+      max-width: var(--page-width);
+      margin: 40px auto 0;
+      padding: 24px 28px 0;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+
+    /* ===== Mobile ===== */
+    @media (max-width: 700px) {
+      .wrap { padding: 26px 22px; margin-top: 16px; border-radius: 0; }
+      h1 { font-size: 19px; }
+      .thumbs { grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 28px; }
+      .brand { font-size: 18px; letter-spacing: 1px; }
+      .topbar-inner { padding: 12px 16px; }
+      .price-now { font-size: 26px; }
+      .purchase-bar { gap: 14px; padding: 20px; }
+      .btn-buy { width: 100%; padding: 15px; }
+      .model-badge { font-size: 13px; padding: 8px 14px; gap: 8px; }
+      .desc h2 { font-size: 17px; }
+      .reviews h2 { font-size: 17px; }
+      .detail-imgs h2 { font-size: 17px; }
+      .reviews-summary { gap: 16px; padding: 16px 18px; }
+      .reviews-score { font-size: 34px; }
+      .reviews-stars { font-size: 16px; letter-spacing: 2px; }
+      footer { padding: 0 20px; }
+      .footer-bottom { padding: 20px 20px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">AUERVO</div>
+    </div>
+  </div>
+
+  <div class="wrap">
+
+    <h1>RFWIN 100 Small Ziplock Bags, 7 X 10cm Small Plastic Bags, Clear Reusable Grip Seal Bags for Jewelry Snacks Seeds Coins</h1>
+
+    <!-- Model badge -->
+    <div class="model-badge">
+      <span class="model-label">Brand</span>
+      <span class="model-value">RFWIN</span>
+         </div>
+
+
+    <!-- Main image -->
+    <img class="main-img" src="images/new-main.jpg" alt="RFWIN Grip Seal Bags" id="mainImg">
+
+    <!-- Thumbnails -->
+    <div class="thumbs">
+      <img src="images/new-main.jpg" alt="" class="active" onclick="swap(this)">
+      <img src="images/new-top1.jpg" alt="" onclick="swap(this)">
+      <img src="images/new-top2.jpg" alt="" onclick="swap(this)">
+      <img src="images/new-top3.jpg" alt="" onclick="swap(this)">
+      <img src="images/new-top4.jpg" alt="" onclick="swap(this)">
+      <img src="images/new-top5.jpg" alt="" onclick="swap(this)">
+      <img src="images/new-top6.jpg" alt="" onclick="swap(this)">
+    </div>
+
+    <!-- Purchase card -->
+    <div class="purchase-bar">
+      <div class="price-box">
+        <span class="price-now">£ 4.99</span>
+        <span class="price-old">£ 6.99</span>
+        <span class="save-badge">SAVE 29%</span>
+      </div>
+
+      <div class="qty-box">
+        <button type="button" onclick="changeQty(-1)">−</button>
+        <input type="text" id="qtyInput" value="1" readonly>
+        <button type="button" onclick="changeQty(1)">+</button>
+      </div>
+
+      <button class="btn-buy" onclick="buyNow()">Buy Now</button>
+    </div>
+
+    <div class="desc">
+
+      <h2>Specification</h2>
+      <p>The zip baggies are 2 mils thick and measure 7 X 10cm / 2.75 x 3.9 inches (actual usable size), perfect for coins, seeds; they are also great for small arts crafts &amp; jewelry.</p>
+
+      <h2>Safe Material</h2>
+      <p>Made from Low-density polyethylene (LDPE), odorless, non-toxic and eco-friendly. Very durable and strong, can provide good protection and display for your goods.</p>
+
+      <h2>Easy to Use</h2>
+      <p>Easy to close and open, without the need for impulse sealers or tape. Completely airtight and waterproof.</p>
+
+      <h2>Versatile Use</h2>
+      <p>Suitable for plant seeds, spices, nails, screws, jewelry, coins, rings, gifts, safety pins and small snacks. A must-have for home and office.</p>
+
+      <h2>Product Details</h2>
+      <table class="specs">
+        <tr><td>Package Includes</td><td>100 × Clear Grip Seal Bags</td></tr>
+        <tr><td>Size</td><td>7 × 10 cm (2.75 × 3.9 inches)</td></tr>
+        <tr><td>Thickness</td><td>2 mils (single layer)</td></tr>
+        <tr><td>Material</td><td>LDPE Plastic</td></tr>
+        <tr><td>Colour</td><td>Clear</td></tr>
+        <tr><td>Shape</td><td>Rectangular</td></tr>
+      </table>
+
+    </div>
+
+    <!-- Detail images -->
+    <div class="detail-imgs">
+      <h2>Product Details</h2>
+      <img src="images/new-desc1.jpg" alt="" onclick="openLightbox(this)">
+      <img src="images/new-desc2.jpg" alt="" onclick="openLightbox(this)">
+      <img src="images/new-desc3.jpg" alt="" onclick="openLightbox(this)">
+      <img src="images/new-desc4.jpg" alt="" onclick="openLightbox(this)">
+      <img src="images/new-desc5.jpg" alt="" onclick="openLightbox(this)">
+    </div>
+
+    <!-- Customer Reviews -->
+    <div class="reviews">
+      <h2>Customer Reviews</h2>
+
+      <div class="reviews-summary">
+        <div class="reviews-score">5.0</div>
+        <div class="reviews-meta">
+          <div class="reviews-stars">★★★★★</div>
+          <div class="reviews-count">Based on 5 reviews</div>
+        </div>
+      </div>
+
+      <!-- Review 1 -->
+      <div class="review">
+        <div class="review-head">
+          <span class="review-name">Sarah M.</span>
+        </div>
+        <div class="review-title">
+          <span class="review-stars">★★★★★</span>
+          <span class="review-headline">Perfect for small business</span>
+        </div>
+        <div class="review-date">Reviewed in the United Kingdom on 12 March 2026</div>
+        <div class="review-verified">Verified Purchase</div>
+        <div class="review-body">I use these for packaging my handmade earrings. They are sturdy, the zip closes securely, and the size is just right. Will buy again.</div>
+        <div class="review-actions">
+          <span>Helpful</span>
+          <span>Report</span>
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="review">
+        <div class="review-head">
+          <span class="review-name">James K.</span>
+        </div>
+        <div class="review-title">
+          <span class="review-stars">★★★★★</span>
+          <span class="review-headline">Great little bags</span>
+        </div>
+        <div class="review-date">Reviewed in the United Kingdom on 5 January 2026</div>
+        <div class="review-verified">Verified Purchase</div>
+        <div class="review-body">Bought these to organise screws and small hardware in my workshop. The bags are thick enough and don't tear easily. Good value.</div>
+        <div class="review-actions">
+          <span>Helpful</span>
+          <span>Report</span>
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="review">
+        <div class="review-head">
+          <span class="review-name">Emily R.</span>
+        </div>
+        <div class="review-title">
+          <span class="review-stars">★★★★★</span>
+          <span class="review-headline">Exactly what I needed</span>
+        </div>
+        <div class="review-date">Reviewed in the United Kingdom on 22 November 2025</div>
+        <div class="review-verified">Verified Purchase</div>
+        <div class="review-body">Using these for seed storage. They seal well and keep moisture out. The 7x10cm size is perfect for small quantities.</div>
+        <div class="review-actions">
+          <span>Helpful</span>
+          <span>Report</span>
+        </div>
+      </div>
+
+      <!-- Review 4 -->
+      <div class="review">
+        <div class="review-head">
+          <span class="review-name">David L.</span>
+        </div>
+        <div class="review-title">
+          <span class="review-stars">★★★★★</span>
+          <span class="review-headline">Strong and reliable</span>
+        </div>
+        <div class="review-date">Reviewed in the United Kingdom on 8 September 2025</div>
+        <div class="review-verified">Verified Purchase</div>
+        <div class="review-body">These are much better than the thin bags I bought before. The zip is solid and the plastic feels durable. Recommended.</div>
+        <div class="review-actions">
+          <span>Helpful</span>
+          <span>Report</span>
+        </div>
+      </div>
+
+      <!-- Review 5 -->
+      <div class="review">
+        <div class="review-head">
+          <span class="review-name">Hannah P.</span>
+        </div>
+        <div class="review-title">
+          <span class="review-stars">★★★★★</span>
+          <span class="review-headline">Very handy</span>
+        </div>
+        <div class="review-date">Reviewed in the United Kingdom on 14 July 2025</div>
+        <div class="review-verified">Verified Purchase</div>
+        <div class="review-body">I keep a pack in the kitchen for snacks and a pack in my craft room for beads. They work great for both.</div>
+        <div class="review-actions">
+          <span>Helpful</span>
+          <span>Report</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img src="" alt="" id="lightboxImg">
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-col">
+      <h5>AUERVO</h5>
+      <a href="#">About Us</a>
+      <a href="#">Our Story</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h5>Customer Service</h5>
+      <a href="#">Shipping Info</a>
+      <a href="#">Returns</a>
+      <a href="#">FAQ</a>
+    </div>
+    <div class="footer-col">
+      <h5>Follow Us</h5>
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+    </div>
+  </footer>
+
+  <div class="footer-bottom">
+    © 2025 AUERVO. All rights reserved.
+  </div>
+
+  <script>
+    /* ========== Product ========== */
+    const PRODUCT = {
+      id: 'rfwin-grip-seal-bags-100',
+      name: '100 Grip Seal Resealable Zip Poly Bags - 7 X 10cm Clear',
+      price: 4.99,
+      currency: '£',
+      image: 'images/new-main.jpg'
+    };
+
+    const STORAGE_KEY = 'auervo_cart';
+
+    /* ========== Thumbnail switch ========== */
+    function swap(el) {
+      const main = document.getElementById('mainImg');
+      main.classList.add('fade');
+      setTimeout(() => {
+        main.src = el.src;
+        main.classList.remove('fade');
+      }, 150);
+      document.querySelectorAll('.thumbs img').forEach(i => i.classList.remove('active'));
+      el.classList.add('active');
+    }
+
+    /* ========== Quantity ========== */
+    function changeQty(delta) {
+      const input = document.getElementById('qtyInput');
+      let v = parseInt(input.value) || 1;
+      v += delta;
+      if (v < 1) v = 1;
+      if (v > 99) v = 99;
+      input.value = v;
+    }
+
+    /* ========== Buy Now → go to checkout ========== */
+    function buyNow() {
+      const qty = parseInt(document.getElementById('qtyInput').value) || 1;
+      const cart = [{
+        ...PRODUCT,
+        qty: qty
+      }];
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(cart));
+      window.location.href = 'checkout.html';
+    }
+
+    /* ========== Lightbox ========== */
+    function openLightbox(img) {
+      const lb = document.getElementById('lightbox');
+      document.getElementById('lightboxImg').src = img.src;
+      lb.classList.add('show');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('show');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+
+</body>
+</html>
